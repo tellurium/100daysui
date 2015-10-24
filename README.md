@@ -1,4 +1,5 @@
-Frontend version for [100 days UI](http://www.100daysui.com/)
+My front end development daily exercises.
+> Frontend version for [100 days UI](http://www.100daysui.com/)
 
 ## Some Disciplines
 
