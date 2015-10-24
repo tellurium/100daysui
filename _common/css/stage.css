@@ -1,0 +1,13 @@
+.stage {
+    background-color: #FFF;
+    margin: auto;
+
+    width: 61.8%;
+    height: 61.8%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
