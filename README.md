@@ -8,3 +8,4 @@ My front end development daily exercises.
 * High Performance
 * Try new tools as much as possible
 * Ignore old browsers
+* Golden Ratio
