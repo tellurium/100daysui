@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <meta name="format-detection" content="telephone=no" >
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1, width=device-width" >
+    <meta name="apple-mobile-web-app-capable" content="yes" >
+
+    <link rel="stylesheet" href="./css/animations.css" >
+    <link rel="stylesheet" href="./css/reset.css" >
+    <link rel="stylesheet" href="./css/layout.css" >
+    <link rel="stylesheet" href="./css/style.css" >
+
+    <title>2014-01-27</title>
+</head>
+<body>
+    <section id="home-page" class="page">
+        <header>
+            <nav class="nav-bar">
+                <button class="back-btn"></button>
+                <h1 class="nav-title">车辆体检</h1>
+                <button class="setting-btn"></button>
+            </nav>
+        </header>
+
+        <section class="report">
+            <header>
+                <h2><span>&lt;</span>12月车况报告<span>&gt;</span></h2>
+                <h3>奥迪A4L</h3>
+                <ul>
+                    <li>
+                        <h4>本月里程</h4>
+                        <p>312KM</p>
+                    </li>
+                    <li>
+                        <h4>油耗</h4>
+                        <p>7.9L</p>
+                    </li>
+                    <li>
+                        <h4>平均车速</h4>
+                        <p>67KM/H</p>
+                    </li>
+                    <li>
+                        <h4>车辆故障</h4>
+                        <p>0</p>
+                    </li>
+                </ul>
+            </header>
+
+            <section>
+                <header>
+                    <h4>体检分数</h4>
+                </header>
+
+                <section>
+                    <div class="score-wrapper">
+                        <svg viewBox='0 0 100 100'>
+                            <path fill="#51C2E9" transform="translate(50, 50)"/>
+                            <circle cx="50" cy="50" r="45" fill="#F7F6F4" />
+                        </svg>
+                        <div>
+                            <h2><span class="score">0</span>分</h2>
+                            <h3>车况良好</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+                    <button>&emsp;&nbsp;详细信息</button>
+                </footer>
+            </section>
+        </section>
+    </section>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/jquery.event.move/js/jquery.event.move.js"></script>
+    <script src="bower_components/jquery.event.swipe/js/jquery.event.swipe.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/router/router.js"></script>
+    <script src="js/view/home.js"></script>
+
+    <script>
+        app.init();
+    </script>
+</body>
+</html>
