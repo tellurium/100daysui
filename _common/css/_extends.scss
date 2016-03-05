@@ -1,0 +1,47 @@
+////
+/// @group COMMON
+/// @author Shuai Xia
+////
+
+@import "variables";
+
+/// sizes
+%fullSize {
+    height: 100%;
+    width: 100%;
+}
+
+///
+%absoluteFull {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+///
+%absoluteFullSize {
+    @extend %fullSize;
+    @extend %absoluteFull;
+}
+
+///
+%mobileSize {
+    min-height: $mobile-s-height;
+    max-height: $mobile-l-height;
+    min-width: $mobile-s-width;
+    max-width: $mobile-l-width;
+}
+
+///
+%goldenSize {
+    width: $golden-ratio0618;
+    height: $golden-ratio0618;
+}
+
+/// margin and padding
+%slim {
+    margin: 0;
+    padding: 0;
+}

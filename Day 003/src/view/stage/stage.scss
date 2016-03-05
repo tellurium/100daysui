@@ -1,0 +1,10 @@
+@import "../../../../_common/css/extends";
+@import "../../../../_common/css/mixins";
+
+.stage {
+    @extend %absoluteFull;
+    @extend %mobileSize;
+
+    background-color: $white;
+    margin: auto;
+}

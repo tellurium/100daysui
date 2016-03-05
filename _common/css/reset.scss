@@ -1,0 +1,10 @@
+@import "variables";
+@import "extends";
+
+html, body, .target {
+    @extend %fullSize;
+    @extend %slim;
+
+    background-color: $white;
+    display: block;
+}

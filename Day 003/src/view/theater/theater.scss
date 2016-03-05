@@ -1,0 +1,7 @@
+@import "../../../../_common/css/extends";
+
+.theater {
+    @extend %fullSize;
+
+    background-color: #F4F4F4;
+}

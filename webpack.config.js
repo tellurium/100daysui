@@ -11,13 +11,15 @@ module.exports = {
         filename: '[name].js'
     },
     plugins: [
+        new HtmlWebpackPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'day003/index.html'
+            filename: 'day003/index.html',
+            template: path.resolve(__dirname, 'Day 003/src/index.html')
         }),
     ],
     module: {
         loaders: [
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
@@ -27,7 +29,7 @@ module.exports = {
                 }
             },
             { test: /\.html/, loader: 'html-loader' },
-            { test: /\.(jpe?g|gif|png)$/, loader: "file-loader" }
+            { test: /\.(jpe?g|gif|png)$/, loader: 'file-loader' }
         ]
     }
 };
