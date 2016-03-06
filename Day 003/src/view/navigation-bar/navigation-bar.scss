@@ -1,0 +1,30 @@
+@import "../../../../_common/css/extends";
+@import "../../../../_common/css/variables";
+
+.navigation-bar {
+    box-shadow: 0 0.2px 0 0 $ios-gray;
+    height: $ios-navigation-bar-height;
+    position: relative;
+
+    .left-item, .middle-item, .right-item {
+        @extend %absoluteFull;
+
+        line-height: $ios-navigation-bar-height;
+        text-align: center;
+    }
+
+    .left-item {
+        right: $golden-ratio0809;
+        width: $golden-ratio0191;
+    }
+
+    .middle-item {
+        left: $golden-ratio0191;
+        right: $golden-ratio0191;
+    }
+
+    .right-item {
+        left: $golden-ratio0809;
+        width: $golden-ratio0191;
+    }
+}

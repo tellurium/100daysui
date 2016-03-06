@@ -1,0 +1,7 @@
+@import "../../../_common/css/extends";
+
+.navigation-controller {
+    @extend %fullSize;
+
+    position: relative;
+}

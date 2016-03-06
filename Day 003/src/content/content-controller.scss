@@ -1,0 +1,9 @@
+@import "../../../_common/css/extends";
+@import "../../../_common/css/variables";
+
+.content-controller {
+    @extend %absoluteFull;
+
+    background-color: #EFEFF4;
+    top: $ios-navigation-bar-height;
+}

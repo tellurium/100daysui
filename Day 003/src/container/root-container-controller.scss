@@ -1,0 +1,5 @@
+@import "../../../_common/css/extends";
+
+.root-container-controller {
+    @extend %fullSize;
+}
