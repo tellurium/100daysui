@@ -13,6 +13,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin(),
         new HtmlWebpackPlugin({
+            favicon: false,
             filename: 'day003/index.html',
             template: path.resolve(__dirname, 'Day 003/src/index.html')
         }),
@@ -29,7 +30,8 @@ module.exports = {
                 }
             },
             { test: /\.html/, loader: 'html-loader' },
-            { test: /\.(jpe?g|gif|png)$/, loader: 'file-loader' }
+            { test: /\.(jpe?g|gif|png)$/, loader: 'file-loader?name=[path][name].[ext]' },
+            { test: /\.svg$/, loader: 'url-loader' }
         ]
     }
 };

@@ -1,6 +1,8 @@
 @import "../../../../_common/css/extends";
 @import "../../../../_common/css/variables";
 
+$navbar-item-vertical-padding: 2.24%;
+
 .navigation-bar {
     box-shadow: 0 0.2px 0 0 $ios-gray;
     height: $ios-navigation-bar-height;
@@ -9,21 +11,31 @@
     .left-item, .middle-item, .right-item {
         @extend %absoluteFull;
 
+        color: $ios-blue;
         line-height: $ios-navigation-bar-height;
         text-align: center;
     }
 
     .left-item {
+        padding-left: $navbar-item-vertical-padding;
         right: $golden-ratio0809;
         width: $golden-ratio0191;
     }
 
+    .left-item.back:before {
+        content: '';
+        background-image: url("../../../res/Chevron.svg");
+    }
+
     .middle-item {
+        color: $black;
         left: $golden-ratio0191;
         right: $golden-ratio0191;
     }
 
     .right-item {
+        padding-right: $navbar-item-vertical-padding;
+        text-align: right;
         left: $golden-ratio0809;
         width: $golden-ratio0191;
     }

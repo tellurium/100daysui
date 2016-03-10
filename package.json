@@ -18,6 +18,7 @@
     "url": "https://github.com/tellurium/100daysui/issues"
   },
   "homepage": "https://github.com/tellurium/100daysui#readme",
+  "engines" : { "node" : ">=5.7.1" },
   "dependencies": {
     "classnames": "^2.2.3",
     "react": "^0.14.7",
@@ -31,6 +32,7 @@
     "babel-preset-react": "^6.5.0",
     "css-loader": "^0.23.1",
     "eslint": "^2.2.0",
+    "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.9.0",
     "node-sass": "^3.4.2",
@@ -38,6 +40,7 @@
     "sass-loader": "^3.1.2",
     "sassdoc": "^2.1.20",
     "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
