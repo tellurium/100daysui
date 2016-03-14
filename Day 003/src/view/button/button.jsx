@@ -4,6 +4,7 @@
  * - title        - Title. String displayed on the button
  * - className    - Class names. Space divided string. Like, 'back roasted'.
  * - image        - Image inside the button.
+ * - click        - Click event handler.
  *
  * # states:
  * - normal       - True if current button is enabled but neither selected or highlighted. Default is `true`
@@ -16,8 +17,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
+import { EMPTY_FUNC } from '../../common/common.js';
 
-require('./button.css');
+require('./button.scss');
 
 class Button extends React.Component {
     constructor(props) {
@@ -25,11 +27,26 @@ class Button extends React.Component {
 
         this.state = {
             normal: true,
-            highlighted: true,
+            highlighted: false,
             disabled: false,
             selected: false,
             focused: false
         };
+    }
+
+    onTouchStart() {
+        this.setState({
+            highlighted: true
+        });
+    }
+
+    onClick() {
+    }
+
+    onTouchEnd() {
+        this.setState({
+            highlighted: false
+        });
     }
 
     getTitle() {
@@ -41,7 +58,7 @@ class Button extends React.Component {
     getImage() {
         let image = this.props.image;
         if (!image) {
-            return '';
+            return null;
         }
 
         return (
@@ -58,7 +75,10 @@ class Button extends React.Component {
             'focused':this.state.focused
         });
         return (
-            <div className={cn}>
+            <div className={cn}
+                onTouchStart={() => this.onTouchStart()}
+                onTouchEnd={() => this.onTouchEnd()}
+                onClick={() => this.onClick()}>
                 {this.getImage()}
                 {this.getTitle()}
             </div>
@@ -69,13 +89,15 @@ class Button extends React.Component {
 Button.propTypes = {
     title: React.PropTypes.string,
     className: React.PropTypes.string,
-    image: React.PropTypes.string
+    image: React.PropTypes.string,
+    click: React.PropTypes.func
 };
 
 Button.defaultProps = {
     title: '',
     className: '',
-    image: ''
+    image: '',
+    click: EMPTY_FUNC
 };
 
 export default Button;

@@ -16,17 +16,23 @@ $concrete: #F2F2F2;
 
 // golden ratios
 ///
-$golden-ratio0191: 19.1%;
+$golden-ratio-0191p: 19.1%;
+$golden-ratio-191: .191;
 ///
-$golden-ratio0382: 38.2%;
+$golden-ratio-0382p: 38.2%;
+$golden-ratio-382: .382;
 ///
-$golden-ratio0500: 50%;
+$golden-ratio-0500p: 50%;
+$golden-ratio-500: .5;
 ///
-$golden-ratio0618: 61.8%;
+$golden-ratio-0618p: 61.8%;
+$golden-ratio-618: .618;
 ///
-$golden-ratio0809: 80.9%;
+$golden-ratio-0809p: 80.9%;
+$golden-ratio-809: .809;
 ///
-$golden-ratio1618: 161.8%;
+$golden-ratio-1618p: 161.8%;
+$golden-ratio-1618: 1.618;
 
 // mobile sizes
 ///
@@ -54,10 +60,17 @@ $laptop-width: 1024px;
 // Colors
 ///
 $ios-gray: #BFBFC3;
+///
 $ios-blue: #007AFF;
+///
+$ios-dark: #2B2B2B;
 
 // Sizes
+///
+$ios-fingertip-size: 44px;
 ///
 $ios-status-bar-height: 20px;
 ///
 $ios-navigation-bar-height: 44px;
+///
+$ios-border-radius: 6px;

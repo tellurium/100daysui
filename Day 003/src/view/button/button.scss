@@ -1,0 +1,33 @@
+@import "../../../../_common/css/extends";
+@import "../../../../_common/css/mixins";
+
+///
+.button {
+    @extend %fullSize;
+
+    background-color: none;
+    color: $ios-blue;
+    height: $ios-fingertip-size;
+    text-align: center;
+    line-height: $ios-fingertip-size;
+
+    /// Styles
+    &.white,
+    &.dark {
+        border-radius: $ios-border-radius;
+    }
+
+    &.white {
+        background-color: $white;
+    }
+
+    &.dark {
+        background-color: $ios-dark;
+        color: $white;
+    }
+
+    /// States
+    &.highlighted {
+        opacity: $golden-ratio-382;
+    }
+}

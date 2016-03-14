@@ -18,8 +18,8 @@ $navbar-item-vertical-padding: 2.24%;
 
     .left-item {
         padding-left: $navbar-item-vertical-padding;
-        right: $golden-ratio0809;
-        width: $golden-ratio0191;
+        right: $golden-ratio-0809p;
+        width: $golden-ratio-0191p;
     }
 
     .left-item.back:before {
@@ -29,14 +29,14 @@ $navbar-item-vertical-padding: 2.24%;
 
     .middle-item {
         color: $black;
-        left: $golden-ratio0191;
-        right: $golden-ratio0191;
+        left: $golden-ratio-0191p;
+        right: $golden-ratio-0191p;
     }
 
     .right-item {
         padding-right: $navbar-item-vertical-padding;
         text-align: right;
-        left: $golden-ratio0809;
-        width: $golden-ratio0191;
+        left: $golden-ratio-0809p;
+        width: $golden-ratio-0191p;
     }
 }
