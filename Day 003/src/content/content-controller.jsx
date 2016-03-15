@@ -8,7 +8,7 @@ class ContentController extends React.Component {
   render() {
     return (
         <div className="content-controller">
-            <Button title="Hello World!"/>
+            <Button type="back" title="Hello World!"/>
         </div>
     );
   }

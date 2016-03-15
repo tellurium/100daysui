@@ -1,4 +1,5 @@
 require('../../_common/css/reset.scss');
+require('./view/base.scss');
 require('./view/theater/theater.scss');
 require('./view/stage/stage.scss');
 

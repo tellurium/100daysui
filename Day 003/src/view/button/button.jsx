@@ -21,6 +21,10 @@ import { EMPTY_FUNC } from '../../common/common.js';
 
 require('./button.scss');
 
+const BUTTON_TYPES = {
+    back: require('../../../res/chevron.svg')
+};
+
 class Button extends React.Component {
     constructor(props) {
         super(props);
@@ -56,13 +60,13 @@ class Button extends React.Component {
     }
 
     getImage() {
-        let image = this.props.image;
+        let image = this.props.image || BUTTON_TYPES[this.props.type];
         if (!image) {
             return null;
         }
 
         return (
-            <img src={image}/>
+            <img className="icon" src={image} />
         );
     }
 
@@ -73,12 +77,14 @@ class Button extends React.Component {
             'disabled': this.state.disabled,
             'selected': this.state.selected,
             'focused':this.state.focused
-        });
+        }, ...this.props.className.split(' '));
         return (
             <div className={cn}
-                onTouchStart={() => this.onTouchStart()}
-                onTouchEnd={() => this.onTouchEnd()}
-                onClick={() => this.onClick()}>
+                onTouchStart={this.onTouchStart.bind(this)}
+                onTouchEnd={this.onTouchEnd.bind(this)}
+                onMouseDown={this.onTouchStart.bind(this)}
+                onMouseUp={this.onTouchEnd.bind(this)}
+                onClick={this.onClick.bind(this)}>
                 {this.getImage()}
                 {this.getTitle()}
             </div>
@@ -90,14 +96,16 @@ Button.propTypes = {
     title: React.PropTypes.string,
     className: React.PropTypes.string,
     image: React.PropTypes.string,
-    click: React.PropTypes.func
+    click: React.PropTypes.func,
+    type: React.PropTypes.string
 };
 
 Button.defaultProps = {
     title: '',
     className: '',
     image: '',
-    click: EMPTY_FUNC
+    click: EMPTY_FUNC,
+    type: ''
 };
 
 export default Button;
