@@ -6,14 +6,30 @@ import ContentController from '../content/content-controller.jsx';
 require('./navigation-controller.scss');
 
 class NavigationController extends React.Component {
-  render() {
-    return (
-        <div className="navigation-controller">
-            <NavigationBar />
-            <ContentController />
-        </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+
+        this.state = {
+
+        };
+    }
+
+    render() {
+        return (
+            <div className="navigation-controller">
+                <NavigationBar />
+                <ContentController />
+            </div>
+        );
+    }
 }
+
+NavigationController.propTypes = {
+
+};
+
+NavigationController.defaultProps = {
+
+};
 
 export default NavigationController;

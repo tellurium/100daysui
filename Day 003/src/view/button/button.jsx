@@ -5,6 +5,7 @@
  * - className    - Class names. Space divided string. Like, 'back roasted'.
  * - image        - Image inside the button.
  * - click        - Click event handler.
+ * - type         - Button type
  *
  * # states:
  * - normal       - True if current button is enabled but neither selected or highlighted. Default is `true`
