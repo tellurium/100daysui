@@ -1,0 +1,9 @@
+@import "../../../../_common/css/extends";
+
+$table-view-default-background-color: #EFEFF4;
+
+.table-view {
+    @extend %fullSize;
+
+    background-color: $table-view-default-background-color;
+}

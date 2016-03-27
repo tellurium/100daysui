@@ -4,7 +4,5 @@
 .content-controller {
     @extend %absoluteFull;
 
-    background-color: #EFEFF4;
-    padding: 11px;
     top: $ios-navigation-bar-height;
 }

@@ -7,29 +7,40 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 require('./navigation-bar.scss');
 
 class NavigationBar extends React.Component {
 
     genLeftItems () {
+        if (!this.props.leftItem) {
+            return null;
+        }
+
         return (
             <button className="left-item back">
-                Messages
+
             </button>
         );
     }
 
     genMiddleItem () {
+        if (!this.props.title) {
+            return null;
+        }
+
         return (
             <div className="middle-item">
-                Jeanne
+                {this.props.title}
             </div>
         );
     }
 
     genRightItems () {
+        if (!this.props.rightItem) {
+            return null;
+        }
+
         return (
             <button className="right-item">
                 Details
@@ -47,5 +58,13 @@ class NavigationBar extends React.Component {
         );
     }
 }
+
+NavigationBar.propTypes = {
+    title: React.PropTypes.string
+};
+
+NavigationBar.defaultProps = {
+    title: ''
+};
 
 export default NavigationBar;

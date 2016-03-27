@@ -1,17 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Button from '../view/button/button.jsx';
 
 require('./content-controller.scss');
 
 class ContentController extends React.Component {
-  render() {
-    return (
-        <div className="content-controller">
-            <Button type="back" title="Hello World!"/>
-        </div>
-    );
-  }
+
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="content-controller">
+                {this.props.children}
+            </div>
+        );
+    }
 }
+
+ContentController.propTypes = {
+
+};
+
+ContentController.defaultProps = {
+
+};
 
 export default ContentController;

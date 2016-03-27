@@ -9,21 +9,19 @@ import RootContainerController from './container/root-container-controller.jsx';
 import NavigationController from './container/navigation-controller.jsx';
 import Theater from './view/theater/theater.jsx';
 import Stage from './view/stage/stage.jsx';
+import Setting from './apps/settings/settings.js'
 
 ReactDOM.render(
     (
         <div className="theater">
-            <div className="stage">
-                <RootContainerController />
-            </div>
+            <div className="stage"></div>
         </div>
     ),
     document.querySelector('.target')
 );
 
-ReactDOM.render(
-    (
-        <NavigationController />
-    ),
-    document.querySelector('.root-container-controller')
-);
+var app = new Setting(document.querySelector('.stage'));
+
+window.onload = function () {
+    app.start();
+};
