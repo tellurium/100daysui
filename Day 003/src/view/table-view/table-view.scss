@@ -1,9 +1,10 @@
 @import "../../../../_common/css/extends";
 
-$table-view-default-background-color: #EFEFF4;
+$table-view-default-background-color: #E5E5E5;
 
 .table-view {
     @extend %fullSize;
+    @extend %scrollable;
 
     background-color: $table-view-default-background-color;
 }

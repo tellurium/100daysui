@@ -1,8 +1,8 @@
 @import "../../../../_common/css/extends";
 
-.table-view-cell {
+.table-view-header-footer-view {
     @extend %fullSize;
 
-    background-color: $white;
+    background-color: inherit;
     height: $ios-fingertip-size;
 }

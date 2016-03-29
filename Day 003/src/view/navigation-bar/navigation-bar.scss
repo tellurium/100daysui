@@ -2,9 +2,12 @@
 @import "../../../../_common/css/variables";
 
 $navbar-item-vertical-padding: 2.24%;
+$navbar-background-color: #F4F4F4;
+$navbar-bottom-border-color: #ADADAD;
 
 .navigation-bar {
-    box-shadow: 0 0.2px 0 0 $ios-gray;
+    background-color: $navbar-background-color;
+    border-bottom: 1px solid $navbar-bottom-border-color;
     height: $ios-navigation-bar-height;
     position: relative;
 
@@ -29,6 +32,7 @@ $navbar-item-vertical-padding: 2.24%;
 
     .middle-item {
         color: $black;
+        font-weight: bold;
         left: $golden-ratio-0191p;
         right: $golden-ratio-0191p;
     }
