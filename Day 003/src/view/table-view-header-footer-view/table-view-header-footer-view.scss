@@ -1,8 +1,13 @@
 @import "../../../../_common/css/extends";
 
+$table-view-header-footer-view-bottom-border-color: #D5D5D5;
+$table-view-header-footer-height: 35px;
+
 .table-view-header-footer-view {
     @extend %fullSize;
 
     background-color: inherit;
-    height: $ios-fingertip-size;
+    border-bottom: 1px solid $table-view-header-footer-view-bottom-border-color;
+    border-top: 1px solid $table-view-header-footer-view-bottom-border-color;
+    height: $table-view-header-footer-height;
 }
