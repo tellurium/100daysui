@@ -10,14 +10,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
     },
-    plugins: [
-        new HtmlWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            favicon: false,
-            filename: 'day003/index.html',
-            template: path.resolve(__dirname, 'Day 003/src/index.html')
-        }),
-    ],
     module: {
         loaders: [
             { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
@@ -30,8 +22,19 @@ module.exports = {
                 }
             },
             { test: /\.html/, loader: 'html-loader' },
-            { test: /\.(jpe?g|gif|png)$/, loader: 'file-loader?name=[path][name].[ext]' },
+            { test: /\.(jpe?g|gif|png)$/, loader: 'url-loader?name=[path][name].[ext]' },
             { test: /\.svg$/, loader: 'url-loader' }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            favicon: false,
+            filename: 'day003/index.html',
+            template: path.resolve(__dirname, 'Day 003/src/index.html')
+        }),
+        new webpack.DefinePlugin({
+            __DEV__: process.env.NODE_DEV === 'true'
+        })
+    ]
 };

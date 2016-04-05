@@ -5,7 +5,7 @@
   "main": "README.md ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "rm -rf dist/*; webpack-dev-server --content-base dist/ --inline --hot",
+    "dev": "rm -rf dist/*; NODE_DEV=true webpack-dev-server --content-base dist/ --inline --hot",
     "doc": "./node_modules/sassdoc/bin/sassdoc _common/css  --dest doc/sassdoc"
   },
   "repository": {

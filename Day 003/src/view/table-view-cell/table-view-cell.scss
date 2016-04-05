@@ -1,11 +1,63 @@
 @import "../../../../_common/css/extends";
 
 $table-view-cell-bottom-border-color: #D8D8D8;
+$table-view-cell-title-color: $black;
+$table-view-cell-detail-text-color: #8E8E93;
+$table-view-cell-icon-size: 29px;
+$table-view-cell-icon-radius: 6px;
 
 .table-view-cell {
     @extend %fullSize;
 
     background-color: $white;
-
+    display: flex;
     height: $ios-fingertip-size;
+
+    .content {
+        display: flex;
+        flex: 1 1 80%;
+
+        .image {
+
+        }
+
+        .raw-img {
+            border-radius: $table-view-cell-icon-radius;
+            flex: 0 0 $table-view-cell-icon-size;
+            height: $table-view-cell-icon-size;
+            width: $table-view-cell-icon-size;
+        }
+
+        .text {
+            border-top: 1px solid $table-view-cell-bottom-border-color;
+            color: $table-view-cell-title-color;
+            display: flex;
+            flex: 1 1 80%;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .detail-text {
+            color: $table-view-cell-detail-text-color;
+            font-size: 14px;
+        }
+    }
+
+    .accessory {
+        border-top: 1px solid $table-view-cell-bottom-border-color;
+        flex: 0 0 90px;
+    }
+}
+
+.table-view-header-footer-view + .table-view-cell {
+
+    .content {
+        .text {
+            border-top: none;
+        }
+    }
+
+    .accessory {
+        border-top: none;
+    }
 }

@@ -1,0 +1,23 @@
+@import "../../../../_common/css/extends";
+
+.image {
+    .raw-img {
+        @extend %fullSize;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &.flex {
+        display: flex;
+        flex: 0 0 50px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .raw-img {
+            flex: 1;
+        }
+    }
+}

@@ -27,7 +27,6 @@ class SettingsMainController extends React.Component {
                 <SettingsMainView />
             </ContentController>
         );
-
     }
 
     render() {

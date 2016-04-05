@@ -1,0 +1,80 @@
+@import "../../../../_common/css/extends";
+@import "../../../../_common/css/variables";
+
+$setting-image-background-blue: #007AFF;
+$setting-image-background-green: #4CD964;
+$setting-image-background-yellow: #FF9500;
+$setting-image-background-red: #FF2D55;
+$setting-image-background-gray: #8E8E93;
+$setting-image-background-sky: #34AADC;
+
+.red {
+    background-color: $setting-image-background-red;
+}
+
+.blue {
+    background-color: $setting-image-background-blue;
+}
+
+.gray {
+    background-color: $setting-image-background-gray;
+}
+
+.green {
+    background-color: $setting-image-background-green;
+}
+
+.airplane-mode {
+    background-color: $setting-image-background-yellow;
+    background-image: url("../../../res/airplane.png");
+}
+
+.wlan {
+    background-color: $setting-image-background-blue;
+    background-image: url("../../../res/wifi.png");
+}
+
+.bluetooth {
+    background-color: $setting-image-background-blue;
+    background-image: url("../../../res/bluetooth.png");
+}
+
+.cellular {
+    background-color: $setting-image-background-green;
+    background-image: url("../../../res/cellular.png");
+}
+
+.carrier {
+    background-color: $setting-image-background-green;
+    background-image: url("../../../res/carrier.png");
+}
+
+.notifications {
+    background-color: $setting-image-background-gray;
+    background-image: url("../../../res/notifications.png");
+}
+
+.control-center {
+    background-color: $setting-image-background-gray;
+    background-image: url("../../../res/control-center.png");
+}
+
+.do-not-disturb {
+    background-color: $setting-image-background-green;
+    background-image: url("../../../res/do-not-disturb.png");
+}
+
+.general {
+    background-color: $setting-image-background-gray;
+    background-image: url("../../../res/general.png");
+}
+
+.display-brightness {
+    background-color: $setting-image-background-blue;
+    background-image: url("../../../res/display-brightness.png");
+}
+
+.wallpaper {
+    background-color: $setting-image-background-sky;
+    background-image: url("../../../res/wallpaper.png");
+}
