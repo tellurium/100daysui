@@ -16,6 +16,7 @@ $table-view-cell-icon-radius: 6px;
     .content {
         display: flex;
         flex: 1 1 80%;
+        height: 100%;
 
         .image {
 
@@ -46,6 +47,31 @@ $table-view-cell-icon-radius: 6px;
     .accessory {
         border-top: 1px solid $table-view-cell-bottom-border-color;
         flex: 0 0 90px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        .image {
+            height: 100%;
+            flex-basis: 38px;
+        }
+
+        .raw-img {
+            flex: 0 0 13px;
+            height: 13px;
+            width: 8px;
+        }
+    }
+
+    /// States
+    &.highlighted {
+        background-color: $ios-gray;
+
+        & + .table-view-cell .text,
+        & + .table-view-cell .accessory,
+        .text, .accessory {
+            border-top: none;
+        }
     }
 }
 

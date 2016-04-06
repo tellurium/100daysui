@@ -11,6 +11,26 @@ require('./table-view-cell.scss');
 class TableViewCell extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            highlighted: false
+        };
+    }
+
+    onTouchStart() {
+        this.setState({
+            highlighted: true
+        });
+    }
+
+    onClick() {
+        console.log('clicked');
+    }
+
+    onTouchEnd() {
+        this.setState({
+            highlighted: false
+        });
     }
 
     getImage() {
@@ -68,7 +88,7 @@ class TableViewCell extends React.Component {
     getAccessoryView() {
         return (
             <div className="accessory">
-
+                <Image className="flex" imageClass="arrow"/>
             </div>
         );
     }
@@ -79,12 +99,18 @@ class TableViewCell extends React.Component {
 
     render() {
         let cn = classNames({
-            'table-view-cell': true
+            'table-view-cell': true,
+            'highlighted': this.state.highlighted
         }, ...this.props.className.split(' '));
 
         if (this.props.isEditing) {
             return (
-                <div className={cn}>
+                <div className={cn}
+                    onTouchStart={this.onTouchStart.bind(this)}
+                    onTouchEnd={this.onTouchEnd.bind(this)}
+                    onMouseDown={this.onTouchStart.bind(this)}
+                    onMouseUp={this.onTouchEnd.bind(this)}
+                    onClick={this.onClick.bind(this)}>
                     {this.getEditingControl()}
                     {this.getCellContent()}
                     {this.getReorderingControl()}
@@ -92,7 +118,12 @@ class TableViewCell extends React.Component {
             );
         } else {
             return (
-                <div className={cn}>
+                <div className={cn}
+                    onTouchStart={this.onTouchStart.bind(this)}
+                    onTouchEnd={this.onTouchEnd.bind(this)}
+                    onMouseDown={this.onTouchStart.bind(this)}
+                    onMouseUp={this.onTouchEnd.bind(this)}
+                    onClick={this.onClick.bind(this)}>
                     {this.getCellContent()}
                     {this.getAccessoryView()}
                 </div>
