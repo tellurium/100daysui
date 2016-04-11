@@ -18,12 +18,15 @@
     "url": "https://github.com/tellurium/100daysui/issues"
   },
   "homepage": "https://github.com/tellurium/100daysui#readme",
-  "engines" : { "node" : ">=5.7.1" },
+  "engines": {
+    "node": ">=5.7.1"
+  },
   "dependencies": {
     "classnames": "^2.2.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "redux": "^3.3.1"
+    "react-redux": "^4.4.2",
+    "redux": "^3.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.6.0",
@@ -36,6 +39,7 @@
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.9.0",
     "node-sass": "^3.4.2",
+    "redux-devtools": "^3.2.0",
     "sass-loader": "^3.1.2",
     "sassdoc": "^2.1.20",
     "style-loader": "^0.13.0",

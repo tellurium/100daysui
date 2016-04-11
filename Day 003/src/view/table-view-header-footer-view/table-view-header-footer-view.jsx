@@ -15,7 +15,7 @@ class TableViewHeaderFooterView extends React.Component {
     render() {
         return (
             <div className="table-view-header-footer-view">
-
+                {this.props.children}
             </div>
         );
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationController from '../../container/navigation-controller.jsx';
 import ContentController from '../../content/content-controller.jsx';
-import SettingsMainView from './settings-main-view.jsx';
+import SettingContents from './contents/index'
 
 class SettingsMainController extends React.Component {
     constructor(props) {
@@ -9,7 +9,8 @@ class SettingsMainController extends React.Component {
 
         this.state = {
             title: 'Settings',
-            loaded: false
+            loaded: false,
+            currentView: SettingContents.SettingsMainView
         };
     }
 
@@ -24,7 +25,7 @@ class SettingsMainController extends React.Component {
 
         return (
             <ContentController>
-                <SettingsMainView />
+                <this.state.currentView />
             </ContentController>
         );
     }

@@ -4,10 +4,14 @@ $table-view-header-footer-view-bottom-border-color: #D5D5D5;
 $table-view-header-footer-height: 35px;
 
 .table-view-header-footer-view {
-    @extend %fullSize;
+    width: 100%;
 
     background-color: inherit;
     border-bottom: 1px solid $table-view-header-footer-view-bottom-border-color;
     border-top: 1px solid $table-view-header-footer-view-bottom-border-color;
-    height: $table-view-header-footer-height;
+    min-height: $table-view-header-footer-height;
+
+    color: $ios-gray;
+    font-size: 14px;
+    padding: 5px;
 }

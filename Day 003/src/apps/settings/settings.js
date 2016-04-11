@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import Application from '../app.js';
 import SettingsMainController from './settings-main-controller.jsx';
 
+require('./settings.scss');
+
 class Settings extends Application {
     constructor(rootNode) {
         super(rootNode);

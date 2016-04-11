@@ -11,9 +11,9 @@ class ContentController extends React.Component {
 
     render() {
         return (
-            <div className="content-controller">
+            <section className="content-controller">
                 {this.props.children}
-            </div>
+            </section>
         );
     }
 }

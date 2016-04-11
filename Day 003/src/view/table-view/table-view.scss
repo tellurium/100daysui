@@ -7,4 +7,8 @@ $table-view-default-background-color: #E5E5E5;
     @extend %scrollable;
 
     background-color: $table-view-default-background-color;
+
+    .table-view-header-footer-view:last-child {
+        border: none;
+    }
 }

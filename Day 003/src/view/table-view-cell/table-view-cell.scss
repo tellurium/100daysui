@@ -12,14 +12,16 @@ $table-view-cell-icon-radius: 6px;
     background-color: $white;
     display: flex;
     height: $ios-fingertip-size;
+    padding: 0 10px;
 
     .content {
         display: flex;
         flex: 1 1 80%;
         height: 100%;
 
-        .image {
-
+        .image.flex {
+            flex: 0 0 40px;
+            align-items: left;
         }
 
         .raw-img {
@@ -70,7 +72,7 @@ $table-view-cell-icon-radius: 6px;
         & + .table-view-cell .text,
         & + .table-view-cell .accessory,
         .text, .accessory {
-            border-top: none;
+            border-color: transparent;
         }
     }
 }

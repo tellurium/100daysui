@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import Image from '../image/image.jsx';
+import { EMPTY_FUNC } from '../../common/common.js';
 
 require('./table-view-cell.scss');
 
@@ -24,7 +25,7 @@ class TableViewCell extends React.Component {
     }
 
     onClick() {
-        console.log('clicked');
+        this.props.onClick();
     }
 
     onTouchEnd() {
@@ -138,6 +139,7 @@ TableViewCell.propTypes = {
     imageClass: React.PropTypes.string,
     title: React.PropTypes.string,
     detailText: React.PropTypes.string,
+    onClick: React.PropTypes.func,
     isEditing: React.PropTypes.bool
 };
 
@@ -147,6 +149,7 @@ TableViewCell.defaultProps = {
     imageClass: '',
     title: '',
     detailText: '',
+    onClick: EMPTY_FUNC,
     isEditing: false
 };
 
