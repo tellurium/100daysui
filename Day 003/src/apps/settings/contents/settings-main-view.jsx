@@ -4,6 +4,7 @@ import TableViewHeaderFooterView from '../../../view/table-view-header-footer-vi
 import TableViewCell from '../../../view/table-view-cell/table-view-cell.jsx';
 
 import chevronImg from '../../../../res/chevron.svg';
+import SettingsWlanView from './settings-wlan-view.jsx';
 
 class SettingsMainView extends React.Component {
     constructor(props) {
@@ -11,15 +12,25 @@ class SettingsMainView extends React.Component {
     }
 
     navigateTo(view) {
-        console.log('navigation');
+        let handler = this.props.handler;
+        if (!handler) {
+            return;
+        }
+
+        if (!view) {
+            throw new Error('View is not defined');
+            return;
+        }
+
+        handler(view);
     }
 
     render() {
         return (
             <TableView>
                 <TableViewHeaderFooterView />
-                <TableViewCell onClick={this.navigateTo.bind(this)} title="Airplane Mode" imageClass="airplane-mode" />
-                <TableViewCell onClick={this.navigateTo.bind(this)} title="WLAN" imageClass="wlan"/>
+                <TableViewCell disabled title="Airplane Mode" imageClass="airplane-mode" />
+                <TableViewCell onClick={this.navigateTo.bind(this, SettingsWlanView)} title="WLAN" imageClass="wlan"/>
                 <TableViewCell onClick={this.navigateTo.bind(this)} title="Bluetooth" imageClass="bluetooth"/>
                 <TableViewCell onClick={this.navigateTo.bind(this)} title="Cellular" imageClass="cellular"/>
                 <TableViewCell onClick={this.navigateTo.bind(this)} title="Carrier" imageClass="carrier"/>

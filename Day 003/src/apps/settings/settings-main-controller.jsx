@@ -14,6 +14,12 @@ class SettingsMainController extends React.Component {
         };
     }
 
+    navigateTo(view) {
+        this.setState({
+            currentView: view
+        });
+    }
+
     getContent() {
         let rootView = null;
 
@@ -25,7 +31,7 @@ class SettingsMainController extends React.Component {
 
         return (
             <ContentController>
-                <this.state.currentView />
+                <this.state.currentView handler={this.navigateTo.bind(this)} />
             </ContentController>
         );
     }
