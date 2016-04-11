@@ -19,7 +19,6 @@ class SettingsMainView extends React.Component {
 
         if (!view) {
             throw new Error('View is not defined');
-            return;
         }
 
         handler(view);

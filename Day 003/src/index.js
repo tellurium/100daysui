@@ -9,7 +9,7 @@ import RootContainerController from './container/root-container-controller.jsx';
 import NavigationController from './container/navigation-controller.jsx';
 import Theater from './view/theater/theater.jsx';
 import Stage from './view/stage/stage.jsx';
-import Setting from './apps/settings/settings.js'
+import Setting from './apps/settings/settings.js';
 
 ReactDOM.render(
     (

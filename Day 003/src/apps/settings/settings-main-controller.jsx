@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationController from '../../container/navigation-controller.jsx';
 import ContentController from '../../content/content-controller.jsx';
-import SettingContents from './contents/index'
+import SettingContents from './contents/index';
 
 class SettingsMainController extends React.Component {
     constructor(props) {
@@ -21,8 +21,6 @@ class SettingsMainController extends React.Component {
     }
 
     getContent() {
-        let rootView = null;
-
         if (!this.state.loaded) {
             return (
                 <ContentController />
