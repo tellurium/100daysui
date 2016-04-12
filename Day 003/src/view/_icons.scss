@@ -1,15 +1,15 @@
-@import "../../../_common/css/extends";
+@import '../../../_common/css/extends';
 
 ///
 %icon {
-    background-size: auto $golden-ratio-0809p;
-    background-repeat: no-repeat;
     background-position: $ios-icon-padding center;
+    background-repeat: no-repeat;
+    background-size: auto $golden-ratio-0809p;
 }
 
 ///
 %icon-back {
     @extend %icon;
 
-    background-image: url("../../../res/chevron.svg");
+    background-image: url('../../../res/chevron.svg');
 }

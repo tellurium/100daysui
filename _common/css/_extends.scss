@@ -6,13 +6,13 @@
 @import "variables";
 
 /// sizes
-%fullSize {
+%full-size {
     height: 100%;
     width: 100%;
 }
 
 ///
-%absoluteFull {
+%absolute-full {
     position: absolute;
     top: 0;
     right: 0;
@@ -21,13 +21,13 @@
 }
 
 ///
-%absoluteFullSize {
-    @extend %fullSize;
-    @extend %absoluteFull;
+%absolute-fullSize {
+    @extend %full-size;
+    @extend %absolute-full;
 }
 
 ///
-%mobileSize {
+%mobile-size {
     min-height: $mobile-s-height;
     max-height: $mobile-l-height;
     min-width: $mobile-s-width;
@@ -35,7 +35,7 @@
 }
 
 ///
-%goldenSize {
+%golden-size {
     width: $golden-ratio-0618p;
     height: $golden-ratio-0618p;
 }

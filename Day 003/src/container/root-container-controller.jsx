@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../view/button/button.jsx';
 
 require('./root-container-controller.scss');
 

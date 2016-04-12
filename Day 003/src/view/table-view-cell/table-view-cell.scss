@@ -7,7 +7,7 @@ $table-view-cell-icon-size: 29px;
 $table-view-cell-icon-radius: 6px;
 
 .table-view-cell {
-    @extend %fullSize;
+    @extend %full-size;
 
     background-color: $white;
     display: flex;
@@ -19,9 +19,9 @@ $table-view-cell-icon-radius: 6px;
         flex: 1 1 80%;
         height: 100%;
 
-        .image.flex {
-            flex: 0 0 40px;
+        .flex {
             align-items: left;
+            flex: 0 0 40px;
         }
 
         .raw-img {
@@ -48,14 +48,14 @@ $table-view-cell-icon-radius: 6px;
 
     .accessory {
         border-top: 1px solid $table-view-cell-bottom-border-color;
+        display: flex;
         flex: 0 0 90px;
         height: 100%;
-        display: flex;
         justify-content: flex-end;
 
         .image {
-            height: 100%;
             flex-basis: 38px;
+            height: 100%;
         }
 
         .raw-img {
@@ -69,9 +69,15 @@ $table-view-cell-icon-radius: 6px;
     &.highlighted {
         background-color: $ios-gray;
 
-        & + .table-view-cell .text,
-        & + .table-view-cell .accessory,
-        .text, .accessory {
+        & + .table-view-cell {
+            &.text,
+            &.accessory {
+                border-color: transparent;
+            }
+        }
+
+        .text,
+        .accessory {
             border-color: transparent;
         }
     }
@@ -81,11 +87,11 @@ $table-view-cell-icon-radius: 6px;
 
     .content {
         .text {
-            border-top: none;
+            border-top: 0;
         }
     }
 
     .accessory {
-        border-top: none;
+        border-top: 0;
     }
 }

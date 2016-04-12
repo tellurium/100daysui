@@ -27,7 +27,7 @@ ul {
 }
 
 body {
-    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -37,6 +37,6 @@ body {
 }
 
 button {
-    border: none;
+    border: 0;
     -webkit-appearance: none;
 }

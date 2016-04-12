@@ -2,7 +2,7 @@
 
 .image {
     .raw-img {
-        @extend %fullSize;
+        @extend %full-size;
 
         background-position: center;
         background-repeat: no-repeat;
@@ -10,9 +10,9 @@
     }
 
     &.flex {
+        align-items: center;
         display: flex;
         flex: 0 0 50px;
-        align-items: center;
         flex-direction: column;
         justify-content: center;
 

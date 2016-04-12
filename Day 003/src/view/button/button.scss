@@ -4,14 +4,14 @@
 
 ///
 .button {
-    @extend %fullSize;
+    @extend %full-size;
 
     background-color: transparent;
     color: $ios-blue;
     height: $ios-fingertip-size;
+    line-height: $ios-fingertip-size;
     position: relative;
     text-align: center;
-    line-height: $ios-fingertip-size;
 
     /// Styles
     &.white,

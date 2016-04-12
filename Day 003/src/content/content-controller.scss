@@ -1,8 +1,8 @@
-@import "../../../_common/css/extends";
-@import "../../../_common/css/variables";
+@import '../../../_common/css/extends';
+@import '../../../_common/css/variables';
 
 .content-controller {
-    @extend %absoluteFull;
+    @extend %absolute-full;
 
     top: $ios-navigation-bar-height;
 }

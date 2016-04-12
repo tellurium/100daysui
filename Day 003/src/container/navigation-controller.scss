@@ -1,7 +1,7 @@
-@import "../../../_common/css/extends";
+@import '../../../_common/css/extends';
 
 .navigation-controller {
-    @extend %fullSize;
+    @extend %full-size;
 
     position: relative;
 }

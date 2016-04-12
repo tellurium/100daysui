@@ -3,12 +3,15 @@
 $table-view-default-background-color: #E5E5E5;
 
 .table-view {
-    @extend %fullSize;
+    @extend %full-size;
     @extend %scrollable;
 
     background-color: $table-view-default-background-color;
 
-    .table-view-header-footer-view:last-child {
-        border: none;
+    .table-view-header-footer-view {
+        &:last-child {
+            border: 0;
+        }
+
     }
 }

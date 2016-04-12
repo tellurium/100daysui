@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 require('./table-view-header-footer-view.scss');
 

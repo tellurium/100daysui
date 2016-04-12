@@ -3,7 +3,7 @@
 
 ///
 html, body, .target {
-    @extend %fullSize;
+    @extend %full-size;
     @extend %slim;
 
     background-color: $white;

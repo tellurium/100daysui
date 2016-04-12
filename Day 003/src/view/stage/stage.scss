@@ -2,8 +2,8 @@
 @import '../../../../_common/css/mixins';
 
 .stage {
-    @extend %absoluteFull;
-    @extend %mobileSize;
+    @extend %absolute-full;
+    @extend %mobile-size;
 
     background-color: $white;
     border: solid 1px $concrete;

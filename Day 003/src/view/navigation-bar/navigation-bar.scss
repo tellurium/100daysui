@@ -11,8 +11,10 @@ $navbar-bottom-border-color: #ADADAD;
     height: $ios-navigation-bar-height;
     position: relative;
 
-    .left-item, .middle-item, .right-item {
-        @extend %absoluteFull;
+    .left-item,
+    .middle-item,
+    .right-item {
+        @extend %absolute-full;
 
         color: $ios-blue;
         line-height: $ios-navigation-bar-height;
@@ -23,11 +25,13 @@ $navbar-bottom-border-color: #ADADAD;
         padding-left: $navbar-item-vertical-padding;
         right: $golden-ratio-0809p;
         width: $golden-ratio-0191p;
-    }
 
-    .left-item.back:before {
-        content: '';
-        background-image: url("../../../res/chevron.svg");
+        &.back {
+            &:before {
+                background-image: url('../../../res/chevron.svg');
+                content: '';
+            }
+        }
     }
 
     .middle-item {
@@ -38,9 +42,9 @@ $navbar-bottom-border-color: #ADADAD;
     }
 
     .right-item {
+        left: $golden-ratio-0809p;
         padding-right: $navbar-item-vertical-padding;
         text-align: right;
-        left: $golden-ratio-0809p;
         width: $golden-ratio-0191p;
     }
 }

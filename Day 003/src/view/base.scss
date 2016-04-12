@@ -1,9 +1,9 @@
-@import "../../../_common/css/extends";
+@import '../../../_common/css/extends';
 
 ///
 .icon {
-    left: $ios-icon-padding;
     height: $golden-ratio-0618p;
+    left: $ios-icon-padding;
     position: absolute;
     top: (100% - $golden-ratio-0618p)/2;
 }

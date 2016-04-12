@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import Image from '../image/image.jsx';
 import { EMPTY_FUNC } from '../../common/common.js';

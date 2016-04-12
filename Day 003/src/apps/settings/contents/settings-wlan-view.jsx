@@ -3,8 +3,6 @@ import TableView from '../../../view/table-view/table-view.jsx';
 import TableViewHeaderFooterView from '../../../view/table-view-header-footer-view/table-view-header-footer-view.jsx';
 import TableViewCell from '../../../view/table-view-cell/table-view-cell.jsx';
 
-import chevronImg from '../../../../res/chevron.svg';
-
 class SettingsWlanView extends React.Component {
     constructor(props) {
         super(props);
