@@ -1,0 +1,10 @@
+@import "../../../../_common/css/extends";
+
+.stage {
+    @extend %absolute-full;
+    @extend %mobile-size;
+
+    background-color: $white;
+    border: solid 1px $concrete;
+    margin: auto;
+}

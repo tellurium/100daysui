@@ -1,0 +1,5 @@
+@import "../../../../_common/css/extends";
+
+.theater {
+    @extend %full-size;
+}
