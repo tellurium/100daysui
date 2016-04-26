@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rm -rf dist/*; NODE_DEV=true webpack-dev-server --content-base dist/ --inline --hot",
     "doc": "sassdoc _common/css  --dest doc/sassdoc",
-    "lint": "eslint 'Day 003/**/*.js*'",
+    "lint": "eslint 'Day 004/**/*.js*'",
     "scsslint": "sass-lint 'Day */**/*.scss' -v -q -i"
   },
   "repository": {
