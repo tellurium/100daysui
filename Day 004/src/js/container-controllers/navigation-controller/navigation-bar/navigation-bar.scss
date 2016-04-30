@@ -1,0 +1,6 @@
+@import '../../../../../../_common/css/extends';
+@import '../../../../scss/mixins';
+
+.navigation-bar {
+    @include horizontal-three-layout(44px, 0, 44px);
+}

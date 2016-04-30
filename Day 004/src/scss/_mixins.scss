@@ -1,0 +1,36 @@
+/// ==== For layouts ==== ///
+
+/// Divide current block into three parts vertically
+@mixin vertical-three-layout ($top: 44px, $middle: 0, $bottom: 44px) {
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        flex: 0 1 $top;
+    }
+
+    .middle {
+        flex: 1 1 $middle;
+    }
+
+    .bottom {
+        flex: 0 1 $bottom;
+    }
+}
+
+/// Divide current block into three parts horizontally
+@mixin horizontal-three-layout ($left: 44px, $middle: 0, $right: 44px) {
+    display: flex;
+
+    .left {
+        flex: 1 1 $left;
+    }
+
+    .middle {
+        flex: 2 1 $middle;
+    }
+
+    .right {
+        flex: 1 1 $right;
+    }
+}

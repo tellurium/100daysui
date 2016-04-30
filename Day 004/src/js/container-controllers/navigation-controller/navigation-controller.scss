@@ -1,5 +1,8 @@
 @import '../../../../../_common/css/extends';
+@import '../../../scss/mixins';
 
 .navigation-controller {
+    @extend %full-size;
 
+    @include vertical-three-layout(64px, 0, 44px);
 }

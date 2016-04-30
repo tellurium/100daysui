@@ -1,6 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import NavigationBar from './navigation-bar/navigation-bar.jsx';
+import Toolbar from './toolbar/toolbar.jsx';
+import ContentController from '../../content-controllers/content-controller/content-controller.jsx';
+
 require('./navigation-controller.scss');
 
 class NavigationController extends React.Component {
@@ -8,7 +12,9 @@ class NavigationController extends React.Component {
         super(props);
 
         this.state = {
-
+            viewControllers: [],
+            topViewController: null,
+            visibleViewController: this.props.rootViewControllerClass
         };
     }
 
@@ -17,18 +23,26 @@ class NavigationController extends React.Component {
 
         return (
             <div className={cn}>
-                <h1>Hello World</h1>
+                <this.props.navigationBarClass className="top" delegate={this}/>
+                <this.state.visibleViewController className="middle" />
+                <this.props.toolbarClass className="bottom" />
             </div>
         );
     }
 }
 
 NavigationController.propTypes = {
-    className: React.PropTypes.string
+    className: React.PropTypes.string,
+    navigationBarClass: React.PropTypes.func,
+    toolbarClass: React.PropTypes.func,
+    rootViewControllerClass: React.PropTypes.func
 };
 
 NavigationController.defaultProps = {
-    className: ''
+    className: '',
+    navigationBarClass: NavigationBar,
+    toolbarClass: Toolbar,
+    rootViewControllerClass: ContentController
 };
 
 export default NavigationController;
